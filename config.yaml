@@ -1,0 +1,96 @@
+SETTINGS:
+    THREADS: 1  # Jumlah thread yang berjalan secara bersamaan
+    ATTEMPTS: 5  # Jumlah percobaan untuk setiap tindakan
+
+    # Rentang akun yang digunakan
+    ACCOUNTS_RANGE: [0, 0]  
+    EXACT_ACCOUNTS_TO_USE: []
+
+    # Waktu jeda dalam detik
+    PAUSE_BETWEEN_ATTEMPTS: [30, 120]
+    PAUSE_BETWEEN_SWAPS: [30, 120]
+    RANDOM_PAUSE_BETWEEN_ACCOUNTS: [30, 120]
+    RANDOM_PAUSE_BETWEEN_ACTIONS: [30, 120]
+    RANDOM_INITIALIZATION_PAUSE: [30, 120]
+
+    # Faktor pengali jeda untuk tindakan browser
+    BROWSER_PAUSE_MULTIPLIER: 3
+
+FLOW:
+    # Daftar tugas yang akan dijalankan
+    TASKS:
+      [
+        "swaps",
+        "bean",
+        "ambient",
+        "izumi",
+        ["apriori", "magma", "kintsu", "shmonad"],
+        "collect_all_to_monad",
+        "logs",
+      ]
+
+    # Pengaturan swap
+    NUMBER_OF_SWAPS: [1, 3]  # Jumlah swap yang dilakukan
+    PERCENT_OF_BALANCE_TO_SWAP: [10, 15]  # Persentase saldo yang ditukar
+
+FAUCET:
+    MONAD_XYZ: true
+    CAPSOLVER_API_KEY: "CAP-"
+    PROXY_FOR_CAPTCHA: ""
+
+DISPERSE:
+    MIN_BALANCE_FOR_DISPERSE: [0.2, 0.5]  # Saldo minimum sebelum melakukan disperse
+
+APRIORI:
+    AMOUNT_TO_STAKE: [0.0001, 0.0003]
+
+MAGMA:
+    AMOUNT_TO_STAKE: [0.0001, 0.0003]
+
+KINTSU:
+    AMOUNT_TO_STAKE: [0.01, 0.02]  # Minimum adalah 0.01 $MON
+
+BIMA:
+    LEND: true
+    PERCENT_OF_BALANCE_TO_LEND: [20, 30]
+
+GASZIP:
+    NETWORKS_TO_REFUEL_FROM: ["Arbitrum", "Base", "Optimism"]
+    AMOUNT_TO_REFUEL: [0.0001, 0.00015]
+    MINIMUM_BALANCE_TO_REFUEL: 0.5
+    WAIT_FOR_FUNDS_TO_ARRIVE: true
+    MAX_WAIT_TIME: 999999
+
+SHMONAD:
+    BUY_AND_STAKE_SHMON: true
+    UNSTAKE_AND_SELL_SHMON: true
+    PERCENT_OF_BALANCE_TO_SWAP: [2, 3]
+
+ACCOUNTABLE:
+    NFT_PER_ACCOUNT_LIMIT: 3
+
+ORBITER:
+    AMOUNT_TO_BRIDGE: [0.1, 0.2]
+    BRIDGE_ALL: false
+    WAIT_FOR_FUNDS_TO_ARRIVE: true
+    MAX_WAIT_TIME: 999999999
+
+LILCHOGSTARS:
+    MAX_AMOUNT_FOR_EACH_ACCOUNT: [1, 3]
+
+DEMASK:
+    MAX_AMOUNT_FOR_EACH_ACCOUNT: [1, 3]
+
+MONADKING:
+    MAX_AMOUNT_FOR_EACH_ACCOUNT: [1, 3]
+
+MAGICEDEN:
+    NFT_CONTRACTS: [
+      "0x4269cde9751237634d972026583bd39dff10b6f8", # 0.01 $MON
+      "0xb3b63ea6ad288f74c1268a50640919fadae84454", # 0.01 $MON
+      "0xbf5340ac35c0653e4f30a52bca8de137bb717b56", # 0.001 $MON
+      "0x3941ae709a872cd14af1871c8442aa4cf0967e84", # 0.01 $MON
+      "0x0fa3da91d4469dfd8c7a0cb13c47d90c8e88d5bd", # free
+      "0x95d04e083255fe1b71d690791301831b6896d183", # free
+    ]
+
