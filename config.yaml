@@ -25,7 +25,6 @@ FLOW:
         "ambient",
         "izumi",
         ["apriori", "magma", "kintsu", "shmonad"],
-        "collect_all_to_monad",
         "logs",
       ]
 
@@ -93,4 +92,3 @@ MAGICEDEN:
       "0x0fa3da91d4469dfd8c7a0cb13c47d90c8e88d5bd", # free
       "0x95d04e083255fe1b71d690791301831b6896d183", # free
     ]
-
